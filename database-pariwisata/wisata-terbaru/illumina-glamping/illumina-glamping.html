@@ -48,7 +48,7 @@
     <!--/.content -->
 
     <div id="container">
-        <div id="map">
+       <div id="map">
         </div>
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script><script src="js/L.Control.Locate.min.js"></script>
@@ -64,7 +64,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[-7.61255842934976,110.39263903914198],[-7.572676098225323,110.45881058853357]]);
+        }).fitBounds([[-7.624517865611234,110.35547408395834],[-7.549020123873494,110.48073763815643]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -124,8 +124,7 @@
         function pop_BatasAdministrasiKecamatan_4(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Kecamatan</th>\
-                        <td>' + (feature.properties['Kecamatan'] !== null ? autolinker.link(feature.properties['Kecamatan'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>Kecamatan</strong><br />' + (feature.properties['Kecamatan'] !== null ? autolinker.link(feature.properties['Kecamatan'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Kabupaten</th>\
@@ -449,6 +448,9 @@
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>Sumber Foto</strong><br />' + (feature.properties['Sumber Foto'] !== null ? autolinker.link(feature.properties['Sumber Foto'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>Petunjuk Arah</strong><br />' + (feature.properties['Petunjuk Arah'] !== null ? autolinker.link(feature.properties['Petunjuk Arah'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
