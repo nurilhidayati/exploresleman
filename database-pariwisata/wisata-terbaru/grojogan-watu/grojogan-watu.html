@@ -64,7 +64,7 @@
         <script>
         var map = L.map('map', {
             zoomControl:true, maxZoom:28, minZoom:1
-        }).fitBounds([[-7.650301742714927,110.30700932819833],[-7.61041941159049,110.37318087758992]]);
+        }).fitBounds([[-7.661959240321042,110.27548186072764],[-7.586427326744835,110.40080211179958]]);
         var hash = new L.Hash(map);
         map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
         var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
@@ -124,8 +124,7 @@
         function pop_BatasAdministrasiKecamatan_4(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Kecamatan</th>\
-                        <td>' + (feature.properties['Kecamatan'] !== null ? autolinker.link(feature.properties['Kecamatan'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>Kecamatan</strong><br />' + (feature.properties['Kecamatan'] !== null ? autolinker.link(feature.properties['Kecamatan'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Kabupaten</th>\
@@ -449,6 +448,9 @@
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>Sumber Foto</strong><br />' + (feature.properties['Sumber Foto'] !== null ? autolinker.link(feature.properties['Sumber Foto'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>Petunjuk Arah</strong><br />' + (feature.properties['Petunjuk Arah'] !== null ? autolinker.link(feature.properties['Petunjuk Arah'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
