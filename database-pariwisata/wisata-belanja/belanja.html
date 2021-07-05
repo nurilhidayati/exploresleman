@@ -47,7 +47,7 @@
 
     <!--/.content -->
     <div id="container">
-        <div id="map">
+         <div id="map">
         </div>
         <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script><script src="js/L.Control.Locate.min.js"></script>
@@ -127,8 +127,7 @@
         function pop_BatasAdministrasiKecamatan_4(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Kecamatan</th>\
-                        <td>' + (feature.properties['Kecamatan'] !== null ? autolinker.link(feature.properties['Kecamatan'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>Kecamatan</strong><br />' + (feature.properties['Kecamatan'] !== null ? autolinker.link(feature.properties['Kecamatan'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Kabupaten</th>\
@@ -437,6 +436,9 @@
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>Sumber Foto</strong><br />' + (feature.properties['Sumber Foto'] !== null ? autolinker.link(feature.properties['Sumber Foto'].toLocaleString()) : '') + '</td>\
+                    </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>Petunjuk Arah</strong><br />' + (feature.properties['Petunjuk Arah'] !== null ? autolinker.link(feature.properties['Petunjuk Arah'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
