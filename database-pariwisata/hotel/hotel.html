@@ -128,8 +128,7 @@
         function pop_BatasAdministrasiKecamatan_4(feature, layer) {
             var popupContent = '<table>\
                     <tr>\
-                        <th scope="row">Kecamatan</th>\
-                        <td>' + (feature.properties['Kecamatan'] !== null ? autolinker.link(feature.properties['Kecamatan'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>Kecamatan</strong><br />' + (feature.properties['Kecamatan'] !== null ? autolinker.link(feature.properties['Kecamatan'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <th scope="row">Kabupaten</th>\
@@ -439,6 +438,9 @@
                     <tr>\
                         <td colspan="2"><strong>Sumber Foto</strong><br />' + (feature.properties['Sumber Foto'] !== null ? autolinker.link(feature.properties['Sumber Foto'].toLocaleString()) : '') + '</td>\
                     </tr>\
+                    <tr>\
+                        <td colspan="2"><strong>Petunjuk Arah</strong><br />' + (feature.properties['Petunjuk Arah'] !== null ? autolinker.link(feature.properties['Petunjuk Arah'].toLocaleString()) : '') + '</td>\
+                    </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
@@ -473,7 +475,7 @@
                 return L.marker(latlng, style_Hotel_5_0(feature));
             },
         });
-        bounds_group.addLayer(layer_Hotel_5);
+       bounds_group.addLayer(layer_Hotel_5);
         map.addLayer(layer_Hotel_5);
             var title = new L.Control();
             title.onAdd = function (map) {
