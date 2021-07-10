@@ -31,7 +31,7 @@
         position: absolute;
         top: 190px;
         right: 10px;
-        z-index: 500;
+        z-index: 300;
         padding: 1em;
         background-attachment: fixed;
         background-color: #f8f8f8;
@@ -604,6 +604,7 @@
         map.addControl(new L.Control.Search({
             layer: layer_ObyekWisata_5,
             initial: false,
+            zoom: 19,
             hideMarkerOnCollapse: true,
             propertyName: 'Nama Obyek Wisata'}));
         document.getElementsByClassName('search-button')[0].className +=
