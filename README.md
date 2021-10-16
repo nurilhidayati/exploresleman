@@ -4,5 +4,7 @@ Explore Sleman merupakan portal informasi pariwisata di Kabupaten Sleman berbasi
 Demo Web GIS : https://nurilhidayati.github.io/exploresleman/
 
 Dibuat Oleh: Nuril Hidayati
+
 LinkedIn: https://www.linkedin.com/in/nuril-hidayati/
+
 E-mail: nurilhidayati@mail.ugm.ac.id
